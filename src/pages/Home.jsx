@@ -26,7 +26,7 @@ export default function Home() {
         {/* Featured Deals */}
         <div className="mt-12 bg-white p-6 rounded-md shadow-lg">
           <h2 className="text-3xl font-bold text-center mb-6">
-            Today&apos;s Featured Deals
+            Featured Deals
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {Array(4)

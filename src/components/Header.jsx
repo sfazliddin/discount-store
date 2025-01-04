@@ -9,15 +9,13 @@ import SearchBar from "./SearchBar";
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
-
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
   const toggleDropdown = () => {
     setDropdownOpen((prev) => !prev);
   };
 
   return (
-    <header className="flex items-center justify-between px-8 py-4 bg-white">
+    <header className="flex items-center justify-between px-8 py-4 bg-white relative h-16">
       <div className="flex items-center gap-5">
         <a href="/">
           <FaCrown className="w-6 h-6" />
@@ -77,17 +75,28 @@ export default function Header() {
         </nav>
       </div>
       <div className="flex items-center gap-5">
-        {/* Search Button */}
-        <button
-          aria-label="Search"
-          className="hover:text-gray-700"
-          onClick={() => setShowSearch(!showSearch)}
-        >
-          <FaSearch className="w-6 h-6" />
-        </button>
-
-        {/* Search Bar */}
-        {showSearch && <SearchBar />}
+        {/* Search Button and Bar */}
+        {!showSearch ? (
+          <button
+            aria-label="Search"
+            className="hover:text-gray-700"
+            onClick={() => setShowSearch(true)}
+          >
+            <FaSearch className="w-6 h-6" />
+          </button>
+        ) : (
+          <div
+            className="flex items-center gap-2 transition-all duration-500"
+            style={{ width: "100%" }}
+          >
+            {/** <div
+          className={`flex items-center gap-2 absolute transition-all duration-500 ${
+            showSearch ? "left-0 opacity-100 w-full" : "left-10 opacity-0 w-0"
+          } overflow-hidden`}
+        > */}
+            <SearchBar />
+          </div>
+        )}
 
         <button aria-label="Cart" className="hover:text-gray-700">
           <FaShoppingCart className="w-6 h-6" />

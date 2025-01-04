@@ -6,7 +6,9 @@ export default function SearchResults() {
   console.log("Search query:", query);
 
   const filteredItems = items.filter((item) =>
-    item.title.toLowerCase().includes(query.toLowerCase())
+    [item.name, item.description].some((field) =>
+      field?.toLowerCase().includes(query.toLowerCase())
+    )
   );
   console.log("Filtered items:", filteredItems);
 
@@ -24,8 +26,24 @@ export default function SearchResults() {
                   key={item.id}
                   className="border p-4 rounded-lg bg-white shadow hover:shadow-lg transition-shadow"
                 >
-                  <h2 className="text-xl font-semibold">{item.title}</h2>
+                  <div className="w-full h-40 flex items-center justify-center bg-gray-100 rounded-md overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h2 className="text-xl font-semibold mt-4">{item.title}</h2>
                   <p className="text-gray-600">{item.description}</p>
+                  <p className="text-yellow-500 font-bold mt-2">
+                    ${item.price}
+                  </p>
+                  <button
+                    className="mt-4 px-4 py-2 bg-yellow-400 rounded-md hover:bg-yellow-500 transition-colors"
+                    aria-label={`Add ${item.title} to Cart`}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               ))
             ) : (
