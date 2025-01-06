@@ -6,6 +6,7 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 import SearchBar from "./SearchBar";
+import { BASE_PATH } from "../assets/constants";
 
 export default function Header() {
   const [showSearch, setShowSearch] = useState(false);
@@ -17,11 +18,11 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between px-8 py-4 bg-white relative h-16">
       <div className="flex items-center gap-5">
-        <a href="/">
+        <a href={`${BASE_PATH}/`}>
           <FaCrown className="w-6 h-6" />
         </a>
         <nav className="flex gap-5">
-          <a href="/" className="text-black hover:text-gray-700">
+          <a href={`${BASE_PATH}/`} className="text-black hover:text-gray-700">
             HOME
           </a>
           <div className="relative">
@@ -34,31 +35,31 @@ export default function Header() {
             {dropdownOpen && (
               <div className="absolute left-0 mt-2 bg-white border rounded-md shadow-lg z-10">
                 <a
-                  href="/inventory"
+                  href={`${BASE_PATH}/inventory`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   All Items
                 </a>
                 <a
-                  href="/inventory/electronics"
+                  href={`${BASE_PATH}/inventory/electronics`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Electronics
                 </a>
                 <a
-                  href="/inventory/clothing"
+                  href={`${BASE_PATH}/inventory/clothing`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Clothing
                 </a>
                 <a
-                  href="/inventory/home-appliances"
+                  href={`${BASE_PATH}/inventory/home-appliances`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Home Appliances
                 </a>
                 <a
-                  href="/inventory/books"
+                  href={`${BASE_PATH}/inventory/books`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Books
@@ -66,10 +67,16 @@ export default function Header() {
               </div>
             )}
           </div>
-          <a href="/sale" className="text-black hover:text-gray-700">
+          <a
+            href={`${BASE_PATH}/sale`}
+            className="text-black hover:text-gray-700"
+          >
             SALE
           </a>
-          <a href="/reviews" className="text-black hover:text-gray-700">
+          <a
+            href={`${BASE_PATH}/reviews`}
+            className="text-black hover:text-gray-700"
+          >
             REVIEWS
           </a>
         </nav>
@@ -89,11 +96,6 @@ export default function Header() {
             className="flex items-center gap-2 transition-all duration-500"
             style={{ width: "100%" }}
           >
-            {/** <div
-          className={`flex items-center gap-2 absolute transition-all duration-500 ${
-            showSearch ? "left-0 opacity-100 w-full" : "left-10 opacity-0 w-0"
-          } overflow-hidden`}
-        > */}
             <SearchBar />
           </div>
         )}

@@ -13,24 +13,40 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import ContactUs from "./pages/ContactUs";
 import SearchResults from "./pages/SearchResults";
+import { BASE_PATH } from "./assets/constants";
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="/inventory" element={<Inventory />} />
-        <Route path="/inventory/electronics" element={<Electronics />} />
-        <Route path="/inventory/clothing" element={<Clothing />} />
-        <Route path="/inventory/home-appliances" element={<HomeAppliances />} />
-        <Route path="/inventory/books" element={<Books />} />
-        <Route path="/sale" element={<Sale />} />
-        <Route path="/reviews" element={<Reviews />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-of-service" element={<TermsOfService />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/search" element={<SearchResults />} />
+        <Route path={`${BASE_PATH}/`} element={<Home />} />
+        <Route path={`${BASE_PATH}/inventory`} element={<Inventory />} />
+        <Route
+          path={`${BASE_PATH}/inventory/electronics`}
+          element={<Electronics />}
+        />
+        <Route
+          path={`${BASE_PATH}/inventory/clothing`}
+          element={<Clothing />}
+        />
+        <Route
+          path={`${BASE_PATH}/inventory/home-appliances`}
+          element={<HomeAppliances />}
+        />
+        <Route path={`${BASE_PATH}/inventory/books`} element={<Books />} />
+        <Route path={`${BASE_PATH}/sale`} element={<Sale />} />
+        <Route path={`${BASE_PATH}/reviews`} element={<Reviews />} />
+        <Route
+          path={`${BASE_PATH}/privacy-policy`}
+          element={<PrivacyPolicy />}
+        />
+        <Route
+          path={`${BASE_PATH}/terms-of-service`}
+          element={<TermsOfService />}
+        />
+        <Route path={`${BASE_PATH}/contact-us`} element={<ContactUs />} />
+        <Route path={`${BASE_PATH}/search`} element={<SearchResults />} />
       </Routes>
       <Footer />
     </>

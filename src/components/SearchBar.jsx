@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { BASE_PATH } from "../assets/constants";
 
 export default function SearchBar() {
   const [query, setQuery] = useState("");
@@ -7,7 +8,7 @@ export default function SearchBar() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/search?q=${query}`);
+    navigate(`${BASE_PATH}/search?q=${query}`);
   };
 
   return (
