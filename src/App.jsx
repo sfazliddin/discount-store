@@ -13,6 +13,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import ContactUs from "./pages/ContactUs";
 import SearchResults from "./pages/SearchResults";
+import NotFound from "./pages/NotFound";
 import { BASE_PATH } from "./assets/constants";
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
         />
         <Route path={`${BASE_PATH}/contact-us`} element={<ContactUs />} />
         <Route path={`${BASE_PATH}/search`} element={<SearchResults />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

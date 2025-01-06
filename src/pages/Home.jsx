@@ -1,7 +1,19 @@
+import items from "../assets/itemsData";
 import Map from "../components/Map";
+import ProductGrid from "../components/ProductGrid";
 import SearchBar from "../components/SearchBar";
 
 export default function Home() {
+  const featuredDeals = items
+    .filter((item) => item.salePrice < item.price) // Only include items on sale
+    .map((item) => ({
+      ...item,
+      discountPercentage: Math.round(
+        ((item.price - item.salePrice) / item.price) * 100
+      ),
+    }))
+    .sort((a, b) => b.discountPercentage - a.discountPercentage) // Sort by highest discount
+    .slice(0, 4);
   return (
     <div className="min-h-screen bg-gradient-to-r from-yellow-400 to-yellow-200">
       <main className="p-8">
@@ -25,28 +37,11 @@ export default function Home() {
 
         {/* Featured Deals */}
         <div className="mt-12 bg-white p-6 rounded-md shadow-lg">
-          <h2 className="text-3xl font-bold text-center mb-6">
-            Featured Deals
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {Array(4)
-              .fill(null)
-              .map((_, index) => (
-                <div
-                  key={index}
-                  className="border p-4 rounded-lg bg-gray-50 shadow hover:shadow-lg transition-shadow"
-                >
-                  <h3 className="text-xl font-semibold">Deal {index + 1}</h3>
-                  <p className="text-gray-600">Limited-time offer!</p>
-                  <button
-                    className="mt-4 px-4 py-2 bg-yellow-400 rounded-md hover:bg-yellow-500 transition-colors w-full"
-                    aria-label="View Deal"
-                  >
-                    View Deal
-                  </button>
-                </div>
-              ))}
-          </div>
+          <ProductGrid
+            title="Featured Deals"
+            description="Explore the best discounts available now!"
+            items={featuredDeals}
+          />
         </div>
       </main>
     </div>
