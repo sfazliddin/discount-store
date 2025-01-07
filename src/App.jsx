@@ -21,7 +21,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path={`${BASE_PATH}`} element={<Home />} />
+        <Route path={`${BASE_PATH}/`} element={<Home />} />
         <Route path={BASE_PATH + "/inventory"} element={<Inventory />} />
         <Route
           path={`${BASE_PATH}/inventory/electronics`}
