@@ -19,13 +19,13 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between px-8 py-4 bg-white relative h-16">
       <div className="flex items-center gap-5">
-        <a href={`${BASE_PATH}/`}>
+        <Link to={`${BASE_PATH}/`}>
           <FaCrown className="w-6 h-6" />
-        </a>
+        </Link>
         <nav className="flex gap-5">
-          <a href={`${BASE_PATH}/`} className="text-black hover:text-gray-700">
+          <Link to={`${BASE_PATH}/`} className="text-black hover:text-gray-700">
             HOME
-          </a>
+          </Link>
           <div className="relative">
             <button
               onClick={toggleDropdown}
@@ -41,45 +41,45 @@ export default function Header() {
                 >
                   All Items
                 </Link>
-                <a
-                  href={`${BASE_PATH}/inventory/electronics`}
+                <Link
+                  to={`${BASE_PATH}/inventory/electronics`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Electronics
-                </a>
-                <a
-                  href={`${BASE_PATH}/inventory/clothing`}
+                </Link>
+                <Link
+                  to={`${BASE_PATH}/inventory/clothing`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Clothing
-                </a>
-                <a
-                  href={`${BASE_PATH}/inventory/home-appliances`}
+                </Link>
+                <Link
+                  to={`${BASE_PATH}/inventory/home-appliances`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Home Appliances
-                </a>
-                <a
-                  href={`${BASE_PATH}/inventory/books`}
+                </Link>
+                <Link
+                  to={`${BASE_PATH}/inventory/books`}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Books
-                </a>
+                </Link>
               </div>
             )}
           </div>
-          <a
-            href={`${BASE_PATH}/sale`}
+          <Link
+            to={`${BASE_PATH}/sale`}
             className="text-black hover:text-gray-700"
           >
             SALE
-          </a>
-          <a
-            href={`${BASE_PATH}/reviews`}
+          </Link>
+          <Link
+            to={`${BASE_PATH}/reviews`}
             className="text-black hover:text-gray-700"
           >
             REVIEWS
-          </a>
+          </Link>
         </nav>
       </div>
       <div className="flex items-center gap-5">

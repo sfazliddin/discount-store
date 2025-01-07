@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BASE_PATH } from "../assets/constants";
 
 export default function Footer() {
@@ -6,21 +7,21 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-2 text-gray-700">
         <p>&copy; 2025 Discount Store. All rights reserved.</p>
         <div className="flex gap-4">
-          <a
-            href={`${BASE_PATH}/privacy-policy`}
+          <Link
+            to={`${BASE_PATH}/privacy-policy`}
             className="hover:text-gray-500"
           >
             Privacy Policy
-          </a>
-          <a
-            href={`${BASE_PATH}/terms-of-service`}
+          </Link>
+          <Link
+            to={`${BASE_PATH}/terms-of-service`}
             className="hover:text-gray-500"
           >
             Terms of Service
-          </a>
-          <a href={`${BASE_PATH}/contact-us`} className="hover:text-gray-500">
+          </Link>
+          <Link to={`${BASE_PATH}/contact-us`} className="hover:text-gray-500">
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
