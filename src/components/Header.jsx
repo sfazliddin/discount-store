@@ -18,11 +18,11 @@ export default function Header() {
   return (
     <header className="flex items-center justify-between px-8 py-4 bg-white relative h-16">
       <div className="flex items-center gap-5">
-        <a href={`${BASE_PATH}/`}>
+        <a href={`${BASE_PATH}`}>
           <FaCrown className="w-6 h-6" />
         </a>
         <nav className="flex gap-5">
-          <a href={`${BASE_PATH}/`} className="text-black hover:text-gray-700">
+          <a href={`${BASE_PATH}`} className="text-black hover:text-gray-700">
             HOME
           </a>
           <div className="relative">
@@ -35,13 +35,13 @@ export default function Header() {
             {dropdownOpen && (
               <div className="absolute left-0 mt-2 bg-white border rounded-md shadow-lg z-10">
                 <a
-                  href={`${BASE_PATH}/inventory`}
+                  href={BASE_PATH + "/inventory"}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   All Items
                 </a>
                 <a
-                  href={`${BASE_PATH}/inventory/electronics`}
+                  href={BASE_PATH + "/inventory/electronics"}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Electronics
