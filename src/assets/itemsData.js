@@ -59,7 +59,7 @@ const items = [
         description: "Comfortable and stylish denim jeans.",
         price: 49.99,
         salePrice: 45.00,
-        image: "https://m.media-amazon.com/images/I/81t2VNIDZWL._AC_UX679_.jpg",
+        image: "https://pehr.com/cdn/shop/files/4031366-denimjean-vintagewash-1.jpg",
         category: "Clothing",
     },
     {
@@ -68,7 +68,7 @@ const items = [
         description: "Casual t-shirt made from 100% cotton.",
         price: 19.99,
         salePrice: 19.99,
-        image: "https://m.media-amazon.com/images/I/71kjI2sXJkL._AC_UX679_.jpg",
+        image: "https://allmade.com/cdn/shop/files/unisex-heavyweight-recycled-cotton-tee-132289_300x.jpg",
         category: "Clothing",
     },
     {
@@ -77,7 +77,7 @@ const items = [
         description: "Compact microwave oven with multiple cooking modes.",
         price: 129.99,
         salePrice: 125.00,
-        image: "https://m.media-amazon.com/images/I/71FbZzvJUbL._AC_SL1500_.jpg",
+        image: "https://community.waring.com/files/products/wmo90-waring-microwave-oven-main.png",
         category: "Home Appliances",
     },
     {
@@ -86,7 +86,7 @@ const items = [
         description: "Powerful vacuum cleaner for efficient cleaning.",
         price: 199.99,
         salePrice: 189.99,
-        image: "https://m.media-amazon.com/images/I/51EJopXcxLL._AC_UF894,1000_QL80_.jpg",
+        image: "https://hoover.com/cdn/shop/products/UH30601_ATF_1_Hero.jpg",
         category: "Home Appliances",
     },
     {
@@ -95,7 +95,7 @@ const items = [
         description: "Best-selling fiction book to keep you hooked.",
         price: 14.99,
         salePrice: 14.99,
-        image: "https://m.media-amazon.com/images/I/91k0uEG6vPL.jpg",
+        image: "https://media.npr.org/assets/img/2021/08/13/711gd93ifkl_custom-80dd66e555a05cf605f043ca0095760a75d41be4.jpeg",
         category: "Books",
     },
     {
@@ -104,7 +104,7 @@ const items = [
         description: "Learn new recipes with this comprehensive cookbook.",
         price: 24.99,
         salePrice: 22.00,
-        image: "https://m.media-amazon.com/images/I/81i0bXOJHML._AC_UY879_.jpg",
+        image: "https://cdn.loveandlemons.com/wp-content/uploads/2023/01/cookbook3.jpg",
         category: "Books",
     },
     {
@@ -113,7 +113,7 @@ const items = [
         description: "Full HD LED monitor with vibrant colors and sleek design.",
         price: 150.00,
         salePrice: 140.00,
-        image: "https://m.media-amazon.com/images/I/71zBIc2fzOL._AC_UY879_.jpg",
+        image: "https://i5.walmartimages.com/asr/abf3506c-7f48-4302-9700-c21d781143c9.fda7c5594ef543094f1d9ddb521e5746.jpeg",
         category: "Electronics",
     },
     {
@@ -122,7 +122,7 @@ const items = [
         description: "Healthy cooking with minimal oil, perfect for frying and baking.",
         price: 89.99,
         salePrice: 89.99,
-        image: "https://m.media-amazon.com/images/I/71gMdF1LhuL._AC_SL1500_.jpg",
+        image: "https://target.scene7.com/is/image/Target/GUEST_86b9c857-5097-450b-bf5f-b8ed4e88914c?wid=488&hei=488&fmt=pjpeg",
         category: "Home Appliances",
     },
     {
@@ -131,7 +131,7 @@ const items = [
         description: "Trendy graphic t-shirt for casual outings.",
         price: 25.99,
         salePrice: 25.99,
-        image: "https://m.media-amazon.com/images/I/71H2mlw1J2L._AC_UX679_.jpg",
+        image: "https://target.scene7.com/is/image/Target/GUEST_67e3fa5d-cc3d-4e26-87c6-228e6f546ac8?wid=488&hei=488&fmt=pjpeg",
         category: "Clothing",
     },
     {
@@ -140,7 +140,7 @@ const items = [
         description: "Empower yourself with strategies for success and happiness.",
         price: 18.99,
         salePrice: 18.00,
-        image: "https://m.media-amazon.com/images/I/71Fxo9WfTkL._AC_UY879_.jpg",
+        image: "https://m.media-amazon.com/images/I/518JrXFXfiL._SL500_.jpg",
         category: "Books",
     },
 ];

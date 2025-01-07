@@ -1,1 +1,2 @@
 export const BASE_PATH = "/discount-store";
+export const directions = "https://www.google.com/maps/dir//Discount+King,+2271+Hylan+Blvd,+Staten+Island,+NY+10306/@40.5753356,-74.1055033,19.54z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c24eb4be9c3b3f:0xd61b0f8c28296190!2m2!1d-74.1052219!2d40.5753067!3e0?authuser=0&entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D"
